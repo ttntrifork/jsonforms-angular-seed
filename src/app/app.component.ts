@@ -10,6 +10,7 @@ import dataAsset from './data';
 import AJV from 'ajv';
 import { parsePhoneNumber } from 'libphonenumber-js';
 import {ImportComponent} from './import.control';
+import {ReadOnlyComponent} from './read-only.control';
 
 const departmentTester: Tester = and(
   schemaTypeIs('string'),
@@ -52,6 +53,16 @@ export class AppComponent {
         and(
           isControl,
           optionIs('import', true)
+        )
+      )
+    },
+    {
+      renderer: ReadOnlyComponent,
+      tester: rankWith(
+        6,
+        and(
+          isControl,
+          optionIs('readOnlyToggle', true)
         )
       )
     },
