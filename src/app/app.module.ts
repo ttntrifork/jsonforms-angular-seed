@@ -10,11 +10,13 @@ import { AppComponent } from './app.component';
 import { CustomAutocompleteControlRenderer } from './custom.autocomplete';
 import { DataDisplayComponent } from './data.control';
 import { LangComponent } from './lang.control';
+import {ImportComponent} from './import.control';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    ImportComponent,
     CustomAutocompleteControlRenderer,
     LangComponent,
     DataDisplayComponent
@@ -29,7 +31,7 @@ import { LangComponent } from './lang.control';
     HttpClientModule
   ],
   schemas: [],
-  entryComponents: [CustomAutocompleteControlRenderer, LangComponent, DataDisplayComponent],
+  entryComponents: [CustomAutocompleteControlRenderer, LangComponent, DataDisplayComponent, ImportComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {
